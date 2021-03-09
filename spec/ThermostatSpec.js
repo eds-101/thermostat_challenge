@@ -50,5 +50,15 @@ describe ('Thermostat', function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   })
 
+  it('should give me information about energy usage', function() {
+    expect(thermostat.energyUsage()).toEqual("medium-usage")
+    thermostat.down(3) //17 
+    expect(thermostat.energyUsage()).toEqual("low-usage")
+    thermostat.powerSavingOff()
+    thermostat.up(9) //26
+    expect(thermostat.energyUsage()).toEqual("high-usage")
+  })
+
+
 })
 
