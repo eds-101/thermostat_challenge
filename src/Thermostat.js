@@ -7,4 +7,11 @@ class Thermostat {
   getCurrentTemperature() {
     return this.temperature;
   }
+  up(number = 1) {
+    this.temperature += number;
+  }
+  down(number = 1) {
+    this.temperature -= number;
+  }
+
 };
