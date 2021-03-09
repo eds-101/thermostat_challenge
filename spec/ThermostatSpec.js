@@ -45,8 +45,8 @@ describe ('Thermostat', function() {
   })
 
   it('should reset temperature to 20 degrees when reset is called', function() {
-    thermostat.up(6)
-    thermostat.reset
+    thermostat.up(3)
+    thermostat.reset() //always call functions w brackets
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   })
 

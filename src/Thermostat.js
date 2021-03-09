@@ -8,9 +8,15 @@ class Thermostat {
   this.POWER_SAVING_OFF_MAX_TEMP = 32
   this.powerSavingOn();
   }
+
   getCurrentTemperature() {
     return this.temperature;
   }
+  
+  reset(){
+    this.temperature = 20;
+  }
+  
   up(number = 1) {
     if (this.temperature + number > this.MAXIMUM_TEMP) {
       this.temperature = this.MAXIMUM_TEMP;
