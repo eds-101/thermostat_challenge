@@ -59,6 +59,21 @@ describe ('Thermostat', function() {
     expect(thermostat.energyUsage()).toEqual("high-usage")
   })
 
+  it('has power saving mode on by default', function() {
+    expect(thermostat.isPowerSavingModeOn()).toBe(true)
+  })
 
+  it('can switch power saving mode off and on', function() {
+    thermostat.powerSavingOff()
+    expect(thermostat.isPowerSavingModeOn()).toBe(false)
+    thermostat.powerSavingOn()
+    expect(thermostat.isPowerSavingModeOn()).toBe(true)
+  })
+  
+  // it('should tell me if power saving mode is on or off', function() {
+  //   expect(thermostat.isPowerSavingModeOn()).toBe(true)
+  //   thermostat.powerSavingOff()
+  //   expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  // })
 })
 
