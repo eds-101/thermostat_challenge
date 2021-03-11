@@ -36,13 +36,19 @@ $(document).ready(function() {
   }); 
   
   // double check ajax && get methodology via w3schools
-  $.ajax({url: "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=996ebd3f29c7b3e3378c7e61e5174ae6", success:
- function( data ) {
-    $('#london-temp').text(data.main.temp)
-  }
+  $( "#user-city-form" ).submit(function(event) {
+    event.preventDefault(); 
+    var userCity = $('#user-city').val();
+                      $('#city-name').text(userCity);
+            $.ajax( 
+              {url: "http://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&units=metric&appid=743f1595c5ff191c20e7a8e8ad6b865a", success:
+                function( data ) 
+                {
+                  $('#city-temperature').text(data.main.temp)
+                                                        }
+              })}
+                );
 
-       });
-  
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
     $('#temperature').attr('class', thermostat.energyUsage());

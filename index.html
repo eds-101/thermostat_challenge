@@ -7,8 +7,14 @@
   <body>
     <section>
       <h1 id="temperature"></h1>
-      The weather in London is currently <span id="london-temp"></span> degrees.
+      The weather in <span id="city-name"></span> is currently <span id="city-temperature"></span> degrees.
       <!-- add functionality to hide line above -->
+      
+      <form id="user-city-form">
+        <input id="user-city" type="text" placeholder="Enter your city here">
+        <input type="submit" value="Submit">
+      </form>
+      
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
