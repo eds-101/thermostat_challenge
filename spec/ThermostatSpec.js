@@ -11,6 +11,11 @@ describe ('Thermostat', function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
 
   })
+
+  // it("should have a starting default temperature of 20 degrees", function() {
+  //   expect(thermostat.temperature).toEqual(this.DEFAULT_TEMPERATURE);
+  // });
+  
   
   it('drops the temperature when I select down', function() {
     thermostat.down(5)
