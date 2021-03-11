@@ -1,9 +1,8 @@
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Thermostat</title>
+    <link rel='stylesheet' href='styles.css'>
   </head>
   <body>
     <section>
@@ -16,46 +15,13 @@
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
-      <script src="src/thermostat.js"></script>
       <script
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous">
       </script>
-      <script>
-      $( document ).ready(function() {
-        let thermostat = new Thermostat();
-        $('#temperature').text(thermostat.temperature);
-        $('#powersaving-on').css('color','green');
-        $('#powersaving-off').css('color','red');
-
-        $('#temperature-up').click(function() {
-          thermostat.up();
-          $('#temperature').text(thermostat.temperature);
-        });
-        $('#temperature-down').click(function() {
-          thermostat.down();
-          $('#temperature').text(thermostat.temperature);
-        });
-        $('#temperature-reset').click(function() {
-          thermostat.reset();
-          $('#temperature').text(thermostat.temperature);
-        });
-
-        $('#powersaving-on').click(function() {
-          thermostat.powerSavingOn();
-          $('#powersaving-on').css('color','green')
-          $('#powersaving-off').css('color','red')
-          $('#power-saving-status').text('on')
-        });     
-        $('#powersaving-off').click(function() {
-          thermostat.powerSavingOff();
-          $('#powersaving-on').css('color','red')
-          $('#powersaving-off').css('color','green')
-          $('#power-saving-status').text('off')
-        })     
-      });
-      </script>
+      <script src="src/Thermostat.js"></script>
+      <script src="src/thermostatStyling.js"></script>
     </section>
   </body>
 </html>
