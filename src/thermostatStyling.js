@@ -33,7 +33,15 @@ $(document).ready(function() {
     $('#powersaving-off').css('color','green')
     $('#power-saving-status').text('off')
     updateTemperature();
-  });    
+  }); 
+  
+  // double check ajax && get methodology via w3schools
+  $.ajax({url: "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=996ebd3f29c7b3e3378c7e61e5174ae6", success:
+ function( data ) {
+    $('#london-temp').text(data.main.temp)
+  }
+
+       });
   
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
