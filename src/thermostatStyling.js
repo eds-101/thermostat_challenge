@@ -34,6 +34,12 @@ $(document).ready(function() {
     $('#power-saving-status').text('off')
     updateTemperature();
   }); 
+
+  $('#energy-usage').click(function(event) {
+    let energyUsage = thermostat.energyUsage();
+    alert(energyUsage);
+    event.preventDefault();
+  });
   
   // double check ajax && get methodology via w3schools
   $( "#user-city-form" ).submit(function(event) {
@@ -52,7 +58,7 @@ $(document).ready(function() {
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
     $('#temperature').attr('class', thermostat.energyUsage());
-    // double check this
+    // updates color based on output from referenced function
   };
   
 })

@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thermostat</title>
     <link rel='stylesheet' href='styles.css'>
+    <title>Thermostat</title>
   </head>
-  <body>
-    <section>
+  <div class="container">
+    <div class="temperature-controls">
       <h1 id="temperature"></h1>
-      The weather in <span id="city-name"></span> is currently <span id="city-temperature"></span> degrees.
-      <!-- add functionality to hide line above -->
-      
+      <p>
+        <button id="temperature-up">+</button>
+        <button id="temperature-down">-</button>
+        <button id="temperature-reset">Reset</button>
+      </p>
+    </div>
+    <section>
+    <div class="user-city">
       <form id="user-city-form">
         <input id="user-city" type="text" placeholder="Enter your city here">
         <input type="submit" value="Submit">
       </form>
-      
+      The weather in <span id="city-name"></span> is currently <span id="city-temperature"></span> degrees.
+    </div> 
+    <div id="power-saving-controls">
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset"></button>
-        power saving mode is <span id="power-saving-status">on</span>
+        Power saving mode is <span id="power-saving-status">on</span>
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
+    </div>
+    <div id="energy-button">
+      <p>
+        Check your energy usage 
+        <button id="energy-usage">Check</button>
+      </p>
+    </div>
+    </section>
+  </div>
       <script
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -30,6 +43,5 @@
       </script>
       <script src="src/Thermostat.js"></script>
       <script src="src/thermostatStyling.js"></script>
-    </section>
   </body>
 </html>
