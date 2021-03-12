@@ -1,4 +1,42 @@
 
+  title, .container, button {
+    font-family: "Courier New", "Lucida Console", monospace;
+  }
+
+
+/* set page structure */
+  .temperature-controls {
+    position: absolute;
+    left: 5%;
+    width: 25%;
+  }
+  .thermostat-pic {
+    position: relative;
+    left: 5%;
+  }
+  section {
+    margin-left: 25%;
+  }
+
+  /* buttons */
+  button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  input[type=submit], ::placeholder {
+    font-family: "Courier New", "Lucida Console", monospace;
+  }
+
+  #temperature-up {
+    border: 2px solid #ee4b2e;
+  }
+  #temperature-down {
+    border: 2px solid #598ff3;
+  }
+  #temperature-reset {
+    border: 2px solid #000103;
+  }
+
+
 .container {
   width: 60%;
   margin: 0 auto;
